@@ -117,6 +117,13 @@ button
     border-radius: 0% 10% 10% 0%;
 }
 
+.txt 
+{   display: block;
+}
+.loupe
+{   display: none;
+}
+
 .filtre
 {   font-weight: bold;
     display: flex;
@@ -189,13 +196,12 @@ button
     height: 45%;
     padding: 5px;
     font-size: medium;
-    line-height: 50%;
 }
 
 .hotel img
 {   object-fit: cover;
     width: 100%;
-    height: 60%;
+    height: 55%;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -368,6 +374,99 @@ footer
     width: 33%;
     font-size: medium;
     line-height: 200%;
+}
+
+@media screen and (max-width: 800px)
+{   body
+    {   display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }    
+        .global
+    {   min-width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+        main 
+    {   width: 90%;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+    }
+        header
+    {   min-width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+        .nav-link-1 ,.nav-link-2
+    {   padding-top: 0px;
+        padding-bottom: 30px;
+    }
+        .nav-link-1:hover ,.nav-link-2:hover 
+    {   border-bottom: 2px #0065FC solid;
+        border-top: none;
+    }
+        .txt 
+    {   display: none;
+    }
+        .loupe
+    {   display: block;
+        padding: 15px;
+        border-radius: 0% 30% 30% 0%;
+    }
+        .filtre
+    {   width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: start;
+    }
+        .hebergement ,aside ,.hotel
+    {   min-width: 100%;
+        min-height: fit-content;
+    }
+        .hotel-liste
+    {   display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+        max-width: 100%;
+        min-height: fit-content;
+    }
+    .hotel
+    {   width: 100%;
+    }
+    .activite
+    {   width: 90%;
+        height: fit-content;
+    }
+    .activite-liste
+    {   display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-content: none;
+        justify-content: start;
+        width: 100%;
+        height: fit-content;
+    }
+    .activite-1 ,.activite-2 ,.activite-3
+    {   width: 100%;
+        max-height: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer 
+    { width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: bottom;
+    }
 }
 
 
