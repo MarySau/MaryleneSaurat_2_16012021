@@ -21,7 +21,7 @@ body
 
 main /*contient .hebergement et aside*/
 {   width: 100%;
-    height: 700px;
+    height: min-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -120,6 +120,7 @@ button
 .txt 
 {   display: block;
 }
+
 .loupe
 {   display: none;
 }
@@ -127,10 +128,13 @@ button
 .filtre
 {   font-weight: bold;
     display: flex;
-    flex: wrap;
     align-items: center;
     justify-content: start;
     padding-top: 20px;
+}
+
+.filtre-responsive
+{   display: none;
 }
 
 .icon
@@ -150,6 +154,7 @@ button
     text-align: left;
     display: flex;
     align-items: center;
+    box-shadow: 1px 1px 5px #aaa;
 }
 
 .filtre-icon:hover 
@@ -169,7 +174,7 @@ button
 .hebergement
 {   background-color: #F2F2F2;
     border-radius: 20px;
-    max-width: 60%;
+    width:60%;
     height: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -193,15 +198,16 @@ button
     box-shadow: 1px 1px 5px #aaa;
     border-radius: 20px;
     width: 30%;
-    height: 45%;
+    max-height: 45%;
     padding: 5px;
+    margin: 10px;
     font-size: medium;
 }
 
 .hotel img
 {   object-fit: cover;
     width: 100%;
-    height: 55%;
+    max-height: 150px;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -212,8 +218,8 @@ aside
     flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 20px;
-    max-width: 33%;
-    height: 100%;
+    max-width: 30%;
+    min-height: 100%;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -283,8 +289,7 @@ aside
 /*Activités à Marseille*/
 
 .activite
-{   width: 100%;
-    border-radius: 20px;
+{   border-radius: 20px;
     width: 100%;
     height: 600px;
     margin-top: 50px;
@@ -297,7 +302,6 @@ aside
     flex-direction: column;
     align-content: stretch;
     justify-content: space-between;
-    align-content: space-between;
     width: 100%;
     height: 90%;
 }
@@ -338,10 +342,24 @@ aside
     justify-content: space-between;
 }
 
-.activite-1 img ,.activite-2 img ,.activite-3 img
+.activite-1 img 
 {   object-fit: cover;
     width: 100%;
     height: 90%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.activite-2 img ,.activite-3 img
+{   object-fit: cover;
+    width: 100%;
+    height: 80%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.activite-3 img
+{   object-fit: cover;
+    width: 100%;
+    height: 75%;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -349,7 +367,6 @@ aside
 {   width: 90%;
     height: 50px;
     margin-left: 10px;
-    vertical-align: center;
     background-color: white;
 }
 
@@ -365,109 +382,129 @@ footer
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    align-items: top;
     justify-content: space-between;
 }
 
 .footer-liste
 {   list-style-type: none;
     width: 33%;
-    font-size: medium;
     line-height: 200%;
 }
 
 @media screen and (max-width: 800px)
-{   body
+{   .global ,.footer
     {   display: flex;
         flex-direction: column;
-        justify-content: space-around;
-    }    
-        .global
-    {   min-width: 100%;
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
     }
-        main 
-    {   width: 90%;
-        min-height: fit-content;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: start;
+    body, .global 
+    {   width: 100%;
+        margin: 0;
     }
-        header
-    {   min-width: 100%;
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-        .nav-link-1 ,.nav-link-2
-    {   padding-top: 0px;
-        padding-bottom: 30px;
-    }
-        .nav-link-1:hover ,.nav-link-2:hover 
+    .nav-link-1:hover ,.nav-link-2:hover 
     {   border-bottom: 2px #0065FC solid;
         border-top: none;
     }
-        .txt 
+    .recherche 
+    {   margin: auto;
+        width: 90%;
+    }
+    .txt 
     {   display: none;
     }
-        .loupe
+    .loupe
     {   display: block;
         padding: 15px;
-        border-radius: 0% 30% 30% 0%;
+        border-radius: 30% 30% 30% 30%;
     }
-        .filtre
-    {   width: 100%;
+    .filtre
+    {   max-width: 100%;
         display: flex;
         flex-wrap: wrap;
-        align-content: stretch;
-        justify-content: start;
     }
-        .hebergement ,aside ,.hotel
-    {   min-width: 100%;
-        min-height: fit-content;
+    .filtre-desktop
+    {   display: none;
     }
-        .hotel-liste
+    .filtre-responsive
+    {   display: block;
+        min-width: 100%;
+    }
+    .filtre-icon
+    {   margin-top: 10px;
+        max-width: 100%%;
+        padding-right: 20px;
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+    main 
+    {   margin: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .hebergement 
+    {   background-color: white;
+        padding: 20px 0px 20px 0px;
+        min-width: 100%;
+    }
+    .hotel-liste
     {   display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: column;
-        justify-content: start;
-        max-width: 100%;
-        min-height: fit-content;
+        min-width: 100%;
     }
-    .hotel
-    {   width: 100%;
+    .hotel-liste img
+    {   min-height: 250px;
     }
-    .activite
-    {   width: 90%;
-        height: fit-content;
+    aside 
+    {   min-width: 100%;
+        padding: 0px 0px 20px 0px;    
+    }
+    .populaire-titre
+    {   max-width: 90%;
+        margin-left: 20px;
+    }
+    .populaire-liste
+    {   min-width: 100%;
+    }
+    .populaire img
+    {   object-fit: cover;
+        width: 35%;
+        height: 200px;
+    }
+    .activite 
+    {   margin: auto;
+        max-width: 90%;
+        height: min-content;
+        margin-bottom: 50px;
     }
     .activite-liste
     {   display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: column;
         align-content: none;
-        justify-content: start;
+        justify-content: none;
         width: 100%;
-        height: fit-content;
+        height: 90%;
     }
-    .activite-1 ,.activite-2 ,.activite-3
+    .activite-liste img, .hotel img 
+    {   height: 150px;
+    }
+    .hotel, .activite-1, .activite-2, .activite-3 
+    {   margin : 10px 0px;
+        width: 95%;
+    }
+    .activite-1, .activite-2, .activite-3 
+    {   max-height: 200px;
+    }
+    .footer-liste 
     {   width: 100%;
-        max-height: 15%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .footer 
-    { width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        align-items: bottom;
     }
 }
+
+/*@media only screen  and (device-width : 375px) 
+                    and (device-height : 667px) 
+                    and (-webkit-device-pixel-ratio : 2)
+}*/
 
 
 
