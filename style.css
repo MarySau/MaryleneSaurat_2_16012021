@@ -166,7 +166,7 @@ button
 }
 
 .filtre-icon:hover 
-{   font-size: 120%;
+{   color: #0065FC;
 }
 
 .info
@@ -558,10 +558,9 @@ footer
         min-width: 100%;
         width:62%;
     }
-        .hotel
+    .hotel
     {   width: 29%;
         height: 45%;
-    }
     }
     .hotel-liste
     {   display: flex;
@@ -616,7 +615,7 @@ footer
     }
 }
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1024px) 
 {   .hebergement
     {   width:60%;
     }
@@ -627,7 +626,7 @@ footer
         margin: 10px;
         font-size: small;
     }
-    .populaire-texte
+    .global, .texte, h3, .footer
     {   font-size: small;
     }
 }
