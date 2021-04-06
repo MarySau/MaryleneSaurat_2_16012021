@@ -610,7 +610,7 @@ footer
         margin: auto;
     }
 }
-@media screen and (min-width: 800px and max-width: 1280px) 
+/*@media screen and (min-width: 800px and max-width: 1280px) 
 {   .hebergement
     {   width:60%;
     }
@@ -631,4 +631,4 @@ footer
     .global, .texte, h3, .footer
     {   font-size: small;
     }
-}
+}*/
