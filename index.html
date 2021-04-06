@@ -12,17 +12,30 @@
     <div class="global">
 
         <!--Barre de navigation-->
-        <header>
+        <header class="header-desktop">
             <img src="images/Reservia.svg" alt="Logo Reservia"/>
             <nav>
-                <ul class="nav-liste">
+                <ul class="nav-liste-desktop">
                     <li><a class="nav-link-1" href="#hebergements">Hébergements</a></li>
                     <li><a class="nav-link-1" href="#activites">Activités</a></li>
                     <li><a class="nav-link-2" href="#">S'inscrire</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> 
 
+        <header class="header-responsive">
+            <ul class="header-top-responsive">
+                <li><img src="images/Reservia.svg" alt="Logo Reservia"/></li>
+                <li><a class="nav-link-2" href="#">S'inscrire</a></li>
+            </ul>
+            <nav>
+                <ul class="nav-liste-responsive">
+                    <li><a class="nav-link-1" href="#hebergements">Hébergements</a></li>
+                    <li><a class="nav-link-1" href="#activites">Activités</a></li>
+                </ul>
+            </nav>
+        </header>
+ 
         <!--Zone de recherche-->
         <div class="recherche">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -35,7 +48,7 @@
             </div>
             <div class="filtre">
                 <div class="filtre-desktop">Filtres</div>
-                <div class="filtre-responsive"><p>Filtres</p></div>
+                <div class="filtre-responsive">Filtres</div>
                 <div class="filtre-icon">
                     <i class="fas fa-money-bill-wave icon"></i>Economique
                 </div> 
@@ -49,7 +62,10 @@
                     <i class="fas fa-dog icon"></i>Animaux autorisés
                 </div>
             </div>
-            <p><i class="fas fa-info info-marker"></i>Plus de 500 logements disponibles dans cette ville</p>
+            <ul class="info">
+                <li><i class="fas fa-info info-marker"></i></li>
+                <li>Plus de 500 logements disponibles dans cette ville</li>
+            </ul>
         </div>
             
         <main>

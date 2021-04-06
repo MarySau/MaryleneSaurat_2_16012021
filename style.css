@@ -45,14 +45,18 @@ h3
 
 /*Barre de navigation*/
 
-header
+.header-desktop
 {   width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header img
+.header-responsive
+{   display: none;
+}
+
+.header-desktop img
 {   width: auto;
     height: auto;
 }
@@ -62,7 +66,7 @@ a
     color: black;
 }
 
-.nav-liste
+.nav-liste-desktop
 {   list-style-type: none;
     display: flex;
     font-size: medium;
@@ -165,13 +169,26 @@ button
 {   font-size: 120%;
 }
 
+.info
+{   display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    margin-left: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+}
+
 .info-marker
 {   color: #0065FC;
     background-color: white;
     border: 1px #F2F2F2 solid;
     border-radius: 50%;
-    padding: 15px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-right: 15px;
+    margin-left: 0px;
 }
 
 /*Hébergements à Marseille*/
@@ -397,12 +414,12 @@ footer
 }
 
 @media screen and (max-width: 800px)
-{   .global ,.footer
+{   body ,.footer
+    {   width: 100%;
+    }
+    .global ,.footer
     {   display: flex;
         flex-direction: column;
-    }
-    body ,.footer
-    {   width: 100%;
     }
     .global 
     {   width: 90%;
@@ -411,24 +428,61 @@ footer
     h1
     {   font-size: x-large;
         margin-right: 0px;
+        text-align: justify;
     }
     h2
     {   font-size: x-large;
     }
-    header
-    {   margin: auto;
-        width: 90%;
+    .header-desktop
+    {   display: none;
     }
-    .nav-link-1 ,.nav-link-2
+    .header-responsive
+    {   width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header-top-responsive
+    {   list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px;
+    }
+    .header-top-responsive li
+    {   width: 30%;
+        display: flex;
+    }
+    .nav-link-2
     {   padding-left: 25px;
         padding-right: 25px;
         padding-top: 0px;
-        padding-bottom: 30px;
     }
-    .nav-link-1:hover ,.nav-link-2:hover 
-    {   border-bottom: 2px #0065FC solid;
+    .nav-link-2:hover
+    {   display: none;
+    }
+    .nav-liste-responsive
+    {   list-style-type: none;
+        display: flex;
+        width: 100%;
+        padding: 0px;
+    }
+    .nav-liste-responsive li
+    {   width: 50%;
+        display: flex;
+    }
+    .nav-link-1 
+    {   padding-top: 0px;
+        padding-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px #F2F2F2 solid;
+    }
+    .nav-link-1:hover 
+    {   color: #0065FC;
+        border-color: #0065FC;
         border-top: none;
-    }
+    } 
     .recherche 
     {   margin: auto;
         width: 100%;
@@ -465,15 +519,33 @@ footer
     .filtre-responsive
     {   display: block;
         min-width: 100%;
+        padding-bottom: 5px;
     }
     .filtre-icon
     {   margin-top: 10px;
-        max-width: 100%%;
+        max-width: 100%;
         padding-right: 20px;
         margin-left: 0px;
-        margin-right: 40px;
+        margin-right: 20px;
     }
-    main 
+    .info
+    {   list-style-type: none;
+        display: flex;
+        align-items: first baseline;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-right: 50px;
+        word-spacing: 110%;
+    }
+    .info-marker
+    {   border-radius: 50%;
+        margin-right: 10px;
+        font-size: small;
+        padding: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+        main 
     {   margin: auto;
         width: 100%;
         display: flex;
