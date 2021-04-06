@@ -600,7 +600,7 @@ footer
     }
     .hotel, .activite-1, .activite-2, .activite-3 
     {   margin : 10px 0px;
-        width: 95%;
+        min-width: 95%;
     }
     .activite-1, .activite-2, .activite-3 
     {   min-height: 200px;
