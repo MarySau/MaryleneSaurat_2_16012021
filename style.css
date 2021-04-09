@@ -607,3 +607,16 @@ footer
     {   width: 90%;
     }
 }
+
+@media screen and (min-width: 800px) and (max-width: 1024px)
+{   .hebergement
+    {   width: 60%;
+    }
+    .hotel
+    {   width: 25%;
+        height: 300px;
+    }
+    .hotel-star
+    {   padding-top: 15px;
+    }
+}
