@@ -104,7 +104,6 @@ a
 .map-marker
 {   background-color: #F2F2F2;
     padding: 15px;
-    /*border: 2px #F2F2F2 solid;*/
     border-radius: 30% 0% 0% 30%;
 }
 
@@ -119,7 +118,6 @@ button
 {   color: white;
     font-weight: bold;
     background-color: #0065FC;
-    /*border: 2px #0065FC solid;*/
     padding: 10px;
     border-radius: 0% 10% 10% 0%;
 }
