@@ -414,7 +414,8 @@ footer
 
 @media screen and (max-width: 800px)
 {   body ,.footer
-    {   width: 100%;
+    {   max-width: 100%;
+        position: absolute;
     }
     .global ,.footer
     {   display: flex;
@@ -427,7 +428,6 @@ footer
     h1
     {   font-size: x-large;
         margin-right: 0px;
-        text-align: justify;
     }
     h2
     {   font-size: x-large;
@@ -483,13 +483,14 @@ footer
     {   color: #0065FC;
         border-color: #0065FC;
         border-top: none;
+        border-bottom: 2px #0065FC solid;
     } 
     .recherche 
     {   margin: auto;
         width: 100%;
     }
     .recherche p
-    {   font-size: large;
+    {   font-size: medium;
     }
     .map-marker
     {   font-size: 20px;
@@ -529,6 +530,9 @@ footer
         margin-left: 0px;
         margin-right: 10px;
     }
+    .filtre-icon:hover 
+    {   color: #0065FC;
+    }
     .info
     {   list-style-type: none;
         display: flex;
@@ -536,7 +540,6 @@ footer
         padding-top: 20px;
         padding-bottom: 20px;
         margin-right: 50px;
-        word-spacing: 110%;
     }
     .info-marker
     {   border-radius: 50%;
